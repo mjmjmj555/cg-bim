@@ -1,14 +1,14 @@
 # 制作物：建築CGパース制作会社のホームページ(wordpress)
 ## ページ構成
-１．トップページ(利用者の声)
-２．実績紹介ページ(フィルタリング)
-３．会社紹介ページ
-４．資料請求ページ
+1. トップページ(利用者の声)
+2. 実績紹介ページ(フィルタリング)
+3. 会社紹介ページ
+4. 資料請求ページ
 
 ## 使用プラグイン
-・Contact Form 7
-・Flamingo
-・SiteGuard WP Plugin
+* Contact Form 7
+* Flamingo
+* SiteGuard WP Plugin
 
 データが空の場合
 githubに新規リポジトリを作成
