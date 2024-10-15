@@ -25,6 +25,19 @@ width: fit-content;
 background-clip: text;
 color: #00000000;/* 文字を透明にするとグラデーションの色が浮き出る */
 }
+/* ボタンスタイル */
+.btn{
+background-image: var(--g_color);
+color: #FFFFFF;
+text-align: center;
+display: block;
+border-radius: 100px;
+&:hover{
+box-shadow: 0 0 10px #f92828;
+transition: 0.2s;
+}
+}
+
 /* header部分 */
 header{
 display: none;
@@ -219,6 +232,10 @@ color:var(--color_4)
 }
 
 .service-wrapper{
+
+
+
+
 width: 80%;
 margin: 0 auto;
 display: flex;
@@ -227,7 +244,7 @@ gap: 20px;
 >.service-box{
 border-radius: 30px 0 0 0;
 width: calc((100% - 40px) / 2);
-padding: 30px;
+padding: 20px;
 border: 4px solid var(--color_1);
 &:nth-of-type(2){
 border-radius: 0 30px 0 0;
@@ -252,4 +269,63 @@ height: 100%;
 }
 }
 }
+}
+
+/* ピックアップ部分 */
+.pick-up-wrapper{
+width: 70%;
+aspect-ratio: 1/0.7;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 60% 40%;
+grid-template-rows: 50% 50%;
+gap: 40px;
+}
+.pick-up-box{
+border: 1px solid var(--text_color); 
+padding: 20px; 
+>.eye-catch{
+width: 100%;
+aspect-ratio: 4/2.7;
+>img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+}
+>h4{
+font-size: 22px;
+margin: 10px 0;
+}
+>.pick-up-cate{
+display: flex;
+justify-content: space-between;
+}  
+}
+
+.pick-up-box[data-rank="1"]{
+grid-row: 1 / 3;
+grid-column: 1 / 2;
+>.eye-catch{
+    width: 100%;
+    aspect-ratio: 1/1;
+    }
+    >h4{
+    font-size: 24px;
+    text-align: center;
+    margin: 30px 0;
+    }
+}
+.pick-up-box[data-rank="2"]{
+grid-row: 1 / 2;
+grid-column: 2 / 3;
+}
+.pick-up-box[data-rank="3"]{
+grid-row: 2 / 3;
+grid-column: 2 / 3;
+}
+.btn.to-works{
+width: 240px;
+padding: 14px 0;
+margin: 80px auto;
 }
