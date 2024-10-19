@@ -49,6 +49,7 @@ width: 90%;
 height: 50px;
 background-color: var(--main_color);
 position: fixed;
+z-index: calc(infinity);
 left: 0;
 right: 0;
 top: 15px;
@@ -328,4 +329,124 @@ grid-column: 2 / 3;
 width: 240px;
 padding: 14px 0;
 margin: 80px auto;
+}
+
+
+
+
+
+
+/* お客様の声部分 */
+.voice-wrapper{
+width: 80%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+}
+.voice-box{
+width: 32%;
+border: 1px solid var(--text_color);
+border-radius: 8px;
+display: grid;
+grid-template-columns: repeat(2,50%);
+grid-template-rows: repeat(5);
+aspect-ratio: 1/1.3;
+padding: 20px;
+gap: 10px;
+>.avatar{
+grid-column: 1/2;
+grid-row: 1/3;
+}
+>.voice-name{
+padding: 10px;
+font-size: 22px;
+>span{
+display: block;
+font-size: 18px;
+}
+}
+>.voice-date{
+text-align: right;
+}
+>h4{
+grid-column: 1/3;
+grid-row: 3/4;
+text-align: center;
+font-size: 20px;
+}
+>.voice-text{
+ grid-column: 1/3;
+grid-row: 4/6;
+overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+}
+}
+
+/* footer-visual */
+.footer-visual{
+width: 100%;
+height: 100vh;
+position: relative;
+top: 1000px;
+left: 10px;
+>img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+
+}
+&::before{
+display: block;
+content: "";
+width: 100%;
+aspect-ratio: 8/1;
+background-color: #91c5fa;
+clip-path: polygon(0 0,100% 0,0 100%);
+position: absolute;
+top: -1px;
+left: 0;
+}
+&::after{
+display: block;
+content: "";
+width: 70%;
+aspect-ratio: 8/1;
+background-color: #91c5fa;
+clip-path: polygon(0 0,100% 0,0 100%);
+rotate: 180deg;
+position: absolute;
+right: 0;
+bottom: -2px;
+}
+}
+
+footer{
+margin-top: 40px;
+width: 100%;
+height: 100px;
+background-color: var(--color_2);
+}
+
+/* 区切り線 */
+.custom-shape-divider-bottom-1729241043 {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1729241043 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 167px;
+}
+
+.custom-shape-divider-bottom-1729241043 .shape-fill {
+    fill: #FFFFFF;
 }
